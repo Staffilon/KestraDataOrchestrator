@@ -1,0 +1,378 @@
+{
+  "eventFrequency": 4000,
+  "varyEventFrequency": true,
+  "repeatWorkflow": true,
+  "timeBetweenRepeat": 15000,
+  "varyRepeatFrequency": true,
+  "steps": [
+    {
+      "duration": 0,
+      "producerConfig": {
+        "mqtt": {
+          "topic": "/sample.it/jz/device/snapshot/0000/edv/0503"
+        }
+      },
+      "config": [
+        {
+          "t": "nowTimestamp()",
+          "tz": "now()",
+          "uuid": "uuid()",
+          "cuid": "uuid()",
+          "ref": "jzp://edv#0503.0000",
+          "type": "presence",
+          "cat": "0610",
+          "sn": "integer(0, 255)",
+          "m": [
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "device_temperature",
+              "v": "double(0, 40)",
+              "u": "C"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "battery_level",
+              "v": "double(3.26, 3.56)",
+              "u": "V"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "rssi",
+              "d": "jzp://coo#ffffffff00000500.0000",
+              "v": "double(-120, 0)",
+              "u": "dB"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "presence",
+              "v": "integer(0, 1)",
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "coordinator",
+              "d": "jzp://coo#ffffffff00000500.0000",
+              "v": 1,
+              "u": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "duration": 0,
+      "producerConfig": {
+        "mqtt": {
+          "topic": "/sample.it/jz/device/snapshot/0000/edv/0502"
+        }
+      },
+      "config": [
+        {
+          "t": "nowTimestamp()",
+          "tz": "now()",
+          "uuid": "uuid()",
+          "cuid": "uuid()",
+          "ref": "jzp://edv#0502.0000",
+          "type": "gasmeter",
+          "cat": "0631",
+          "sn": "integer(0, 255)",
+          "m": [
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "coordinator",
+              "d": "jzp://coo#ffffffff000004ff.0000",
+              "v": 1,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "ppm",
+              "v": "double(300, 400)",
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "rssi",
+              "d": "jzp://coo#ffffffff000004ff.0000",
+              "v": "double(-120, 0)",
+              "u": "dB"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "device_temperature",
+              "v": "double(0, 40)",
+              "u": "℃"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "battery_level",
+              "v": "double(3.26, 3.56)",
+              "u": "V"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "duration": 0,
+      "producerConfig": {
+        "mqtt": {
+          "topic": "/sample.it/jz/device/snapshot/0000/edv/0501"
+        }
+      },
+      "config": [
+        {
+          "t": "nowTimestamp()",
+          "tz": "now()",
+          "uuid": "uuid()",
+          "cuid": "uuid()",
+          "ref": "jzp://edv#0501.0000",
+          "type": "luxmeter",
+          "cat": "0620",
+          "sn": "integer(0, 255)",
+          "m": [
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "device_temperature",
+              "v": "double(0, 40)",
+              "u": "℃"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "battery_level",
+              "v": "double(3.26, 3.56)",
+              "u": "V"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "orientation",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "back_front",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "regular",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "movement_level",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "posture_tilt",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "rssi",
+              "d": "jzp://coo#ffffffff00000500.0000",
+              "v": "double(-120, 0)",
+              "u": "dB"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "position",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "adc_channel_00",
+              "v": "double(0, 600)",
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "illuminance",
+              "v": "double(0, 600)",
+              "u": "lx"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "coordinator",
+              "d": "jzp://coo#ffffffff00000500.0000",
+              "v": 1,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "pressure",
+              "v": "double(100, 100000)",
+              "u": "Pa"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "adc_channel_01",
+              "v": 0,
+              "u": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "duration": 0,
+      "producerConfig": {
+        "mqtt": {
+          "topic": "/sample.it/jz/device/snapshot/0000/edv/0504"
+        }
+      },
+      "config": [
+        {
+          "t": "nowTimestamp()",
+          "tz": "now()",
+          "uuid": "uuid()",
+          "cuid": "uuid()",
+          "ref": "jzp://edv#0504.0000",
+          "type": "environmental",
+          "cat": "0600",
+          "sn": "integer(0, 255)",
+          "m": [
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "device_temperature",
+              "v": "double(0, 40)",
+              "u": "℃"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "battery_level",
+              "v": "double(3.26, 3.56)",
+              "u": "V"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "dew_point",
+              "v": "double(10, 26)",
+              "u": "℃"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "relative_humidity",
+              "v": "double(0, 100)",
+              "u": "%"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "orientation",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "environmental_temperature",
+              "v": "double(0, 40)",
+              "u": "℃"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "back_front",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "regular",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "movement_level",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "posture_tilt",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "rssi",
+              "d": "jzp://coo#ffffffff00000500.0000",
+              "v": "double(-120, 0)",
+              "u": "dB"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "position",
+              "v": 0,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "absolute_humidity",
+              "v": "double(0, 0.5)",
+              "u": "kg/m³"
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "coordinator",
+              "d": "jzp://coo#ffffffff00000500.0000",
+              "v": 1,
+              "u": ""
+            },
+            {
+              "t": "nowTimestamp()",
+              "tz": "now()",
+              "k": "pressure",
+              "v": "double(100, 100000)",
+              "u": "Pa"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

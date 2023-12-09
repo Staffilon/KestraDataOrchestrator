@@ -1,0 +1,29 @@
+{
+    "string-test": "alpha(4)",
+    "system": "BADGE",
+    "action": "ENTER",
+    "objects": ["Building 1"],
+    "location": "45.5,44.3",
+    "message": "Entered Building 1",
+    "null-test": null,
+    "same-as-system": "this.system",
+    "nest": {
+        "nest-1": "alpha(2)",
+        "sub-nest": {
+            "sub-nest1": "integer(334, 4433)"
+        },
+        "cur-copy": "cur.nest-1"
+    },
+    "nest-ref": "this.nest.nest-1",
+    "sub-nest-ref": "this.nest.sub-nest.sub-nest1",
+    "func-ref": "random(this.action,this.system)",
+    "date": "now('-5_d')",
+    "newer-date": "date(this.date)",
+    "min": 100,
+    "max": 200,
+    "between-min-max": "integer(this.min, this.max)",
+    "array" : [{
+            "start": "now('-5_d')",
+            "end": "date(cur.start)"
+    }]
+}

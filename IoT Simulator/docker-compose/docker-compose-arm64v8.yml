@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  json-generator:
+    image: massimocallisto/json-simulator-arm64v8:1.0.0
+    volumes:
+      - ./conf:/opt/app/json-data-generator/conf
+    command: java -jar json-data-generator.jar simple_Simulator.json
+  mosquitto:
+    image: eclipse-mosquitto
+    volumes:
+      - ./mqtt-config/:/mosquitto/config/:ro
+    ports:
+      - '1883:1883'

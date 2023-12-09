@@ -1,0 +1,17 @@
+{
+  "workflows": [
+    {
+      "workflowName": "mypass_Workflow",
+      "workflowFilename": "simple_Workflow.json"
+    }
+  ],
+  "producers": [
+    {
+      "type": "mqtt",
+      "--broker.server": "tcp://test.mosquitto.org",
+      "broker.server": "tcp://mosquitto",
+      "broker.port": 1883,
+      "clientId": "SAMPLEClient"
+    }
+  ]
+}
