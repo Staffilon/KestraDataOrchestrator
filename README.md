@@ -2,7 +2,7 @@
 # Kestra Data Orchestrator
 
 
-This is a Project for the Technologies for Big Data Management (TBDM) course of the UNICAM Master's Degree Program (BIDS branch).
+This is a Project for the Technologies for Big Data Management (TBDM) course of the UNICAM Master's Degree Program (BIDS branch)
 
 ## Authors
 
