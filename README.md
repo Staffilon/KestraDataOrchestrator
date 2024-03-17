@@ -7,7 +7,8 @@ This is a Project for the Technologies for Big Data Management (TBDM) course of 
 
 ![Logo](https://i.im.ge/2024/03/17/RPR8q8.pipeline.png)
 
-This project has been worked in collaboration with University Of Camerino and Tormatic srl, a reality placed in the Marche region , this Italian industrial company boasts one of the most technologically advanced machine fleets in Italy, which has grown consistently over the years. Their capabilities include working with a wide range of materials such as steel, stainless steel, brass, aluminum, and various plastics. 
+In collaboration with the University of Camerino and Tormatic SRL, based in the Marche region of Italy, this project involves a company recognized for possessing one of the nation's most sophisticated arrays of machinery. The company has seen a consistent expansion over the years and demonstrates expertise in handling an extensive selection of materials, including steel, stainless steel, brass, aluminum, and various plastics.
+
 ## Authors
 
 - [@Stanislav Teghipco](https://github.com/Staffilon)
@@ -17,17 +18,16 @@ This project has been worked in collaboration with University Of Camerino and To
 
 ## Project Outline
 
-The project was an explorative research on a dataset provided by Tormatic Srl. It consisted on several steps:
+Our exploration centered on a dataset provided by Tormatic SRL. The investigation unfolded in several phases:
 
-- We performed feature engineering and explorative data analysis on the initial dataframes, realizing different graphs and solution by leveraging on the power of Python and its libraries like: matplotlib and Pandas.
+- Initially, we engaged in feature engineering and exploratory data analysis using the raw datasets. Our tools of choice were Python and its powerful libraries such as matplotlib and pandas, which enabled us to craft various graphs and analytical solutions.
 
-- We studied if we could work with the data to create a smart machine learning model to perform predictive maintenance.
-- We prototyped an ideal data pipeline that could work to solve the company needs. This was done by using many different technologies: AWS, MongoDB, PySpark, Kestra and PowerBI.
+- Our research also probed the feasibility of employing the data in developing an intelligent machine learning model dedicated to predictive maintenance.
+- We designed a conceptual data pipeline tailored to meet the company's specific requirements. This endeavor employed a diverse suite of technologies, including AWS, MongoDB, PySpark, Kestra, and PowerBI.We prototyped an ideal data pipeline that could work to solve the company needs. This was done by using many different technologies: AWS, MongoDB, PySpark, Kestra and PowerBI.
 
 ## Documentation
-Documentation including source code and explanation is available in the following link:
+Comprehensive documentation that encompasses the source code and its detailed explanation is accessible via the following link:
 [Documentation](https://linktodocumentation)
-
 
 ## Run Locally
 
