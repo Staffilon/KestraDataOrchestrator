@@ -1,0 +1,46 @@
+id: pipeline
+namespace: tormatic
+tasks:
+  - id: parallelDownload
+    type: "io.kestra.core.tasks.flows.Parallel"
+    tasks:
+
+      - id: downloadFermateDataset
+        type: io.kestra.plugin.aws.s3.Download
+        accessKeyId:  "{{ secret('AWS_ACCESS_KEY_ID') }}"
+        secretKeyId:  "{{ secret('AWS_SECRET_ACCESS_KEY') }}"
+        region: "eu-west-2"
+        bucket: "tormatic"
+        key: "all_uncleaned_fermate.csv"
+
+      - id: downloadEnergyDataset
+        type: io.kestra.plugin.aws.s3.Download
+        accessKeyId:  "{{ secret('AWS_ACCESS_KEY_ID') }}"
+        secretKeyId:  "{{ secret('AWS_SECRET_ACCESS_KEY') }}"
+        region: "eu-west-2"
+        bucket: "tormatic"
+        key: "all_uncleaned_energy.csv"
+
+  - id: parallelUpload
+    type: "io.kestra.core.tasks.flows.Parallel"
+    tasks:
+
+      - id: databaseUploadFermate
+        type: "io.kestra.plugin.jdbc.postgresql.CopyIn"
+        url: "{{ secret('PSQL_URL') }}"
+        username: tormatic_owner
+        password: "{{ secret('PSQL_PASSWORD') }}"
+        format: CSV
+        from: '{{ all_uncleaned_fermate.csv }}'
+        table: datasets
+        header: true
+
+      - id: databaseUploadEnergy
+        type: "io.kestra.plugin.jdbc.postgresql.CopyIn"
+        url: "{{ secret('PSQL_URL') }}"
+        username: tormatic_owner
+        password: "{{ secret('PSQL_PASSWORD') }}"
+        format: CSV
+        from: '{{ all_uncleaned_energy.csv }}'
+        table: datasets
+        header: true
