@@ -31,40 +31,88 @@ Comprehensive documentation that encompasses the source code and its detailed ex
 
 ## Run Locally
 
-Clone the project
+### Prerequisites
+Before starting, ensure you have the following installed:
+- **Java**: Spark requires Java to be installed on your machine.
+- **Python**: As PySpark is the Python API for Spark, make sure you have Python installed.
+- **Spark**: Download and install Apache Spark.
+- **Hadoop**: Spark needs Hadoop's core library. You can download Hadoop and set the necessary environment variables.
+- **Git**: To clone the repository, you'll need Git installed.
+### Environment Setup
+- **1.** **Install Java**
+Download and install Java (JDK) from Oracle's website or use OpenJDK.
+Set JAVA_HOME environment variable to the path of your Java installation.
+- **2. Install Python**
+Download and install Python from the official website.
+Ensure Python is added to your system path.
+- **3. Install Spark**
+Download Spark from the Apache Spark website.
+Extract the Spark package to a location on your machine.
+Set SPARK_HOME environment variable to this location.
+Add %SPARK_HOME%\bin to your system path.
+- **4. Install Hadoop (Windows users)**
+Download Hadoop and extract it to a location.
+Set HADOOP_HOME to this location.
+Add %HADOOP_HOME%\bin to your system path.
+Download winutils.exe and place it in %HADOOP_HOME%\bin.
+### Clone the Project
+
+Clone the project using git:
 
 ```bash
-  git clone https://link-to-project
+git clone https://github.com/Staffilon/KestraDataOrchestrator/tree/main
 ```
 
-Go to the project directory
+### Go to the Project Directory
+
+Navigate to your project directory:
 
 ```bash
-  cd my-project
+cd my-project
 ```
 
-Install dependencies
+### Install PySpark
+
+If PySpark is not included in the project, install it:
 
 ```bash
-  npm install
+pip install pyspark
 ```
 
-Start the server
+### Run the Spark Application
+
+Run the application using `spark-submit`:
 
 ```bash
-  npm run start
+spark-submit main.py
 ```
 
+## Kestra Deployment
+In order to run Kestra **locally**, [Docker](https://docs.docker.com/get-docker/) has to be installed on the machine, after which the following command can be run:
+```bash
+docker run --pull=always --rm -it -p 8080:8080 --user=root \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /tmp:/tmp kestra/kestra:latest-full server local
+```
+Afterwards, the platform can be acccessed by opening **http://localhost:8080** in the browser.
 
 ## FAQ
 
-#### Question 1
+#### Have you encountered any challenges during the execution of this project?
 
-Answer 1
+Indeed, we faced several challenges. Initially, we discovered that the dataset provided required extensive cleaning. We tried various strategies to merge the energy consumption data with the 'fermate' (stop) dataset, but this resulted in having only a few data points for each stop code. This scarcity of data points posed a significant challenge in developing a machine learning model that wouldn't overfit.
 
-#### Question 2
+#### Did you find any correlations between energy consumption and the fermate dataframe?
 
-Answer 2
+Our analysis revealed that the most significant correlation is with the quality of the produced goods. We employed various correlation techniques, including T-Tests to compare averages and different types of correlation matrices. 
+
+#### What recommendations would you make to the company?
+
+We advise acquiring new and more detailed data. For a project of this nature, the quality and clarity of data are crucial. The dataset needs refinement in several areas, as outlined in our documentation. Additionally, considering we are dealing with various types of machinery, it would be beneficial to categorize these machines. This would enable us to develop specific machine learning models for each category. Unfortunately, in the current dataset, we could only identify machines by their codes without additional information. Once the data is enhanced, we can establish a pipeline for cleaning the data through an ETL process, loading it into a database, and then conducting analysis and visualizations on the refined data. Subsequently, we could develop a machine learning model with an application to recommend maintenance schedules for each machinery type.
+
+#### What are the advantages of this approach?
+
+The primary advantage of predictive maintenance models is the establishment of a clear maintenance schedule. This allows the maintenance personnel to know precisely when to perform specific actions. The savings are both in terms of time and human resources, which naturally translates into monetary savings, leading to a positive return on investment for the company.
 
 
 ## License
