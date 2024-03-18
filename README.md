@@ -71,7 +71,7 @@ Navigate to your project directory:
 cd my-project
 ```
 
-#### Install PySpark
+### Install PySpark
 
 If PySpark is not included in the project, install it:
 
@@ -87,6 +87,14 @@ Run the application using `spark-submit`:
 spark-submit main.py
 ```
 
+## Kestra Deployment
+In order to run Kestra **locally**, [Docker](https://docs.docker.com/get-docker/) has to be installed on the machine, after which the following command can be run:
+```bash
+docker run --pull=always --rm -it -p 8080:8080 --user=root \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /tmp:/tmp kestra/kestra:latest-full server local
+```
+Afterwards, the platform can be acccessed by opening **http://localhost:8080** in the browser.
 
 ## FAQ
 
