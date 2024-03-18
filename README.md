@@ -71,7 +71,7 @@ Navigate to your project directory:
 cd my-project
 ```
 
-### Install PySpark
+#### Install PySpark
 
 If PySpark is not included in the project, install it:
 
