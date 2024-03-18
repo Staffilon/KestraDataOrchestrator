@@ -31,28 +31,60 @@ Comprehensive documentation that encompasses the source code and its detailed ex
 
 ## Run Locally
 
-Clone the project
+### Prerequisites
+Before starting, ensure you have the following installed:
+- **Java**: Spark requires Java to be installed on your machine.
+- **Python**: As PySpark is the Python API for Spark, make sure you have Python installed.
+- **Spark**: Download and install Apache Spark.
+- **Hadoop**: Spark needs Hadoop's core library. You can download Hadoop and set the necessary environment variables.
+- **Git**: To clone the repository, you'll need Git installed.
+### Environment Setup
+- **1.** **Install Java**
+Download and install Java (JDK) from Oracle's website or use OpenJDK.
+Set JAVA_HOME environment variable to the path of your Java installation.
+- **2. Install Python**
+Download and install Python from the official website.
+Ensure Python is added to your system path.
+- **3. Install Spark**
+Download Spark from the Apache Spark website.
+Extract the Spark package to a location on your machine.
+Set SPARK_HOME environment variable to this location.
+Add %SPARK_HOME%\bin to your system path.
+- **4. Install Hadoop (Windows users)**
+Download Hadoop and extract it to a location.
+Set HADOOP_HOME to this location.
+Add %HADOOP_HOME%\bin to your system path.
+Download winutils.exe and place it in %HADOOP_HOME%\bin.
+### Clone the Project
+
+Clone the project using git:
 
 ```bash
-  git clone https://link-to-project
+git clone https://github.com/Staffilon/KestraDataOrchestrator/tree/main
 ```
 
-Go to the project directory
+### Go to the Project Directory
+
+Navigate to your project directory:
 
 ```bash
-  cd my-project
+cd my-project
 ```
 
-Install dependencies
+### Install PySpark
+
+If PySpark is not included in the project, install it:
 
 ```bash
-  npm install
+pip install pyspark
 ```
 
-Start the server
+### Run the Spark Application
+
+Run the application using `spark-submit`:
 
 ```bash
-  npm run start
+spark-submit main.py
 ```
 
 
